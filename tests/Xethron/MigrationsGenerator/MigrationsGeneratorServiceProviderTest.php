@@ -1,4 +1,4 @@
-<?php namespace Xethron\MigrationsGenerator;
+<?php namespace KyleArch\MigrationGenerator;
 
 use Mockery;
 use PHPUnit_Framework_TestCase;

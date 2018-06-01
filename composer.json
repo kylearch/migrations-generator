@@ -1,23 +1,35 @@
 {
-	"name": "xethron/migrations-generator",
-	"description": "Generates Laravel Migrations from an existing database",
-	"keywords": ["laravel", "migration", "generator", "migrations", "artisan"],
+	"name": "kylearch/migration-generator",
+	"description": "A fork of xethron/migrations-generator to generate a single Laravel Migration file from an existing database, often when porting a legacy system to Laravel.",
+	"keywords": [
+		"laravel",
+		"migration",
+		"generator",
+		"migrations",
+		"artisan"
+	],
 	"license": "MIT",
 	"authors": [
 		{
 			"name": "Bernhard Breytenbach",
 			"email": "bernhard@coffeecode.co.za"
+		},
+		{
+			"name": "Kyle Arch",
+			"email": "kaarch@gmail.com"
 		}
 	],
 	"require": {
 		"php": ">=5.4.0",
+		"illuminate/database": ">=4.1",
 		"illuminate/support": ">=4.1",
+		"illuminate/config": ">=4.1",
 		"xethron/laravel-4-generators": "~3.1.0",
 		"doctrine/dbal": "~2.4"
 	},
 	"autoload": {
-		"psr-0": {
-			"Xethron\\MigrationsGenerator": "src/"
+		"psr-4": {
+			"KyleArch\\MigrationGenerator\\": "src/"
 		}
 	},
 	"require-dev": {
@@ -29,8 +41,8 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Way\\Generators\\GeneratorsServiceProvider",
-				"Xethron\\MigrationsGenerator\\MigrationsGeneratorServiceProvider"
+				"Way\\Generators\\GeneratorsServiceProvider"
+				"KyleArch\\MigrationGenerator\\MigrationGeneratorServiceProvider"
 			]
 		}
 	}
