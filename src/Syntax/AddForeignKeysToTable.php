@@ -1,6 +1,6 @@
 <?php
 
-namespace KyleArch\MigrationGenerator\Syntax;
+namespace KyleArch\SchemaExporter\Syntax;
 
 /**
  * Class AddForeignKeysToTable

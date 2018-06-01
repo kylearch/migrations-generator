@@ -1,6 +1,6 @@
 <?php
 
-namespace KyleArch\MigrationGenerator\Generators;
+namespace KyleArch\SchemaExporter\Generators;
 
 class IndexGenerator
 {

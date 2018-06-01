@@ -1,5 +1,5 @@
 {
-	"name": "kylearch/migration-generator",
+	"name": "kylearch/schema-exporter",
 	"description": "A fork of xethron/migrations-generator to generate a single Laravel Migration file from an existing database, often when porting a legacy system to Laravel.",
 	"keywords": [
 		"laravel",
@@ -29,7 +29,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"KyleArch\\MigrationGenerator\\": "src/"
+			"KyleArch\\SchemaExporter\\": "src/"
 		}
 	},
 	"require-dev": {
@@ -41,8 +41,8 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Way\\Generators\\GeneratorsServiceProvider"
-				"KyleArch\\MigrationGenerator\\MigrationGeneratorServiceProvider"
+				"Way\\Generators\\GeneratorsServiceProvider",
+				"KyleArch\\SchemaExporter\\SchemaExporterServiceProvider"
 			]
 		}
 	}

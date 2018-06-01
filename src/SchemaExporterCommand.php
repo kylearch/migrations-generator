@@ -1,6 +1,6 @@
 <?php
 
-namespace KyleArch\MigrationGenerator;
+namespace KyleArch\SchemaExporter;
 
 use Way\Generators\Commands\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
@@ -11,13 +11,13 @@ use Way\Generators\Compilers\TemplateCompiler;
 use Illuminate\Database\Migrations\MigrationRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 
-use KyleArch\MigrationGenerator\Generators\SchemaGenerator;
-use KyleArch\MigrationGenerator\Syntax\AddToTable;
-use KyleArch\MigrationGenerator\Syntax\DroppedTable;
+use KyleArch\SchemaExporter\Generators\SchemaGenerator;
+use KyleArch\SchemaExporter\Syntax\AddToTable;
+use KyleArch\SchemaExporter\Syntax\DroppedTable;
 
 use Illuminate\Contracts\Config\Repository as Config;
 
-class MigrateGenerateCommand extends GeneratorCommand
+class SchemaExporterCommand extends GeneratorCommand
 {
 
     /**
@@ -53,7 +53,7 @@ class MigrateGenerateCommand extends GeneratorCommand
     protected $config;
 
     /**
-     * @var \KyleArch\MigrationGenerator\Generators\SchemaGenerator
+     * @var \KyleArch\SchemaExporter\Generators\SchemaGenerator
      */
     protected $schemaGenerator;
 

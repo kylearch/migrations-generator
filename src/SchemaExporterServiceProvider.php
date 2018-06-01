@@ -1,10 +1,10 @@
 <?php
 
-namespace KyleArch\MigrationGenerator;
+namespace KyleArch\SchemaExporter;
 
 use Illuminate\Support\ServiceProvider;
 
-class MigrationGeneratorServiceProvider extends ServiceProvider
+class SchemaExporterServiceProvider extends ServiceProvider
 {
 
     /**
@@ -20,7 +20,7 @@ class MigrationGeneratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('export.schema', function ($app) {
-            return new MigrateGenerateCommand($app->make('Way\Generators\Generator'), $app->make('Way\Generators\Filesystem\Filesystem'), $app->make('Way\Generators\Compilers\TemplateCompiler'), $app->make('migration.repository'), $app->make('config'));
+            return new SchemaExporterCommand($app->make('Way\Generators\Generator'), $app->make('Way\Generators\Filesystem\Filesystem'), $app->make('Way\Generators\Compilers\TemplateCompiler'), $app->make('migration.repository'), $app->make('config'));
         });
 
         $this->commands('export.schema');

@@ -1,4 +1,4 @@
-<?php namespace KyleArch\MigrationGenerator;
+<?php namespace KyleArch\SchemaExporter;
 
 use Mockery;
 use PHPUnit_Framework_TestCase;
